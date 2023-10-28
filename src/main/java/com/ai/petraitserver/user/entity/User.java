@@ -1,5 +1,6 @@
 package com.ai.petraitserver.user.entity;
 
+import com.ai.petraitserver.common.entity.TimeStamp;
 import com.ai.petraitserver.user.enums.UserRoleEnum;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,7 +9,7 @@ import lombok.*;
 @Table(name = "users")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class User extends TimeStamp {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
